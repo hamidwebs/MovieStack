@@ -62,3 +62,7 @@ body {
       }
   }
 }
+.remove-typing-cursor {
+	cursor: default;
+	user-select: none;
+}
