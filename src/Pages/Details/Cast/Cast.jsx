@@ -8,8 +8,7 @@ import Img from "../../../Components/LazyLoadImage/img";
 import avatar from "../../../assets/avatar.png";
 
 const Cast = ({ data, loading }) => {
-    const { url } = useSelector((state) => state.home);
-
+    const { profile } = useSelector((state) => state.home.url);
     const skeleton = () => {
         return (
             <div className="skItem">
@@ -25,7 +24,20 @@ const Cast = ({ data, loading }) => {
                 <div className="sectionHeading">Top Cast</div>
                 {!loading ? (
                     <div className="listItems">
-                        Cast Data....
+                        {data?.map((item) => {
+                            let imgUrl = item.profile_path ? profile + item.profile_path : avatar;
+                            return (
+                                <div className="listItem" key={item.id}>
+                                    <div className="profileImg">
+                                        <Img src={imgUrl} />
+                                    </div>
+                                    <div className="name">{item.name}</div>
+                                    <div className="character">
+                                        {item.character}
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
                 ) : (
                     <div className="castSkeleton">

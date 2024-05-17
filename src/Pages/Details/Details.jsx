@@ -4,6 +4,9 @@ import { useParams } from 'react-router-dom'
 import './style.scss'
 import DetailsBanner from './DetailsBanner/DetailsBanner'
 import Cast from './Cast/Cast'
+import VideoSection from './VideoSection/VideoSection'
+import SimilarMovies from './SimilarMovies/SimilarMovies'
+import Recommendation from './Recommendation/Recommendation'
 
 export default function Details() {
   const { mediaType, id } = useParams()
@@ -12,7 +15,10 @@ export default function Details() {
   return (
     <div>
       <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
-      <Cast data={data} loading={loading} />
+      <Cast data={credits?.cast} loading={creditsLoading} />
+      <VideoSection data={data} loading={loading} />
+      <SimilarMovies id={id} />
+      <Recommendation id={id} />
     </div>
   )
 }

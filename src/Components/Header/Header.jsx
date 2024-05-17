@@ -25,9 +25,10 @@ const Header = () => {
     }
     setMobileMenu(false);
   };
-  const openSearch = () => {
+  const openSearch = (e) => {
     setShowSearch(true);
     setMobileMenu(false);
+    searchQueryHandler(e);
   };
   const openMobileMenu = () => {
     setShowSearch(false);
