@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getApiConfiguration } from './store/homeSlice'
+import { getApiConfiguration, getGenres } from './store/homeSlice'
 import { fetchDataFromApi } from './utils/api'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
@@ -16,6 +16,8 @@ function App() {
   const { url } = useSelector((state) => state.home)
   useEffect(() => {
     fetchApiConfig()
+    genresCall();
+    window.scrollTo(0, 0);
   }, [])
   const fetchApiConfig = async () => {
     await fetchDataFromApi('/configuration').then((response) => {
@@ -26,6 +28,21 @@ function App() {
       }
       dispatch(getApiConfiguration(urlConfigInfo))
     })
+  }
+  const genresCall = async () => {
+    let promises = [];
+    let endPoints = ['tv', 'movie']
+    let allGenres = {};
+    endPoints.forEach((url) => {
+      promises.push(fetchDataFromApi(`/genre/${url}/list`))
+    })
+    const data = await Promise.all(promises);
+    data.map(({genres}) => {
+      return genres.map((genre) => {
+        allGenres[genre.id] = genre;
+      })
+    })
+    dispatch(getGenres(allGenres))
   }
   return (
     <div className="remove-typing-cursor">
