@@ -16,8 +16,13 @@ Welcome to the Movie Stack web application! This application allows you to explo
 
 ## Screenshots
 
+<<<<<<< HEAD
 ![Home Page](/ScreenShots/Homepage.png)
 ![Movie Details](/ScreenShots/MovieDetails.png)
+=======
+![Home Page](https://ibb.co/4mDy5V3)
+![Movie Details](https://ibb.co/t8B8HwN)
+>>>>>>> 1b422b53bfdb1de311cf0cf2bb634b2793c5913c
 
 ## Demo
 
@@ -32,6 +37,19 @@ To get a local copy up and running follow these simple steps:
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
 
+<<<<<<< HEAD
+=======
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+>>>>>>> 1b422b53bfdb1de311cf0cf2bb634b2793c5913c
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
