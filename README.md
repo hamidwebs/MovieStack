@@ -16,8 +16,8 @@ Welcome to the Movie Stack web application! This application allows you to explo
 
 ## Screenshots
 
-![Home Page](/screenshots/home.png)
-![Movie Details](/screenshots/movie-details.png)
+![Home Page](https://ibb.co/4mDy5V3)
+![Movie Details](https://ibb.co/t8B8HwN)
 
 ## Demo
 
