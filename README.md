@@ -15,8 +15,9 @@ Welcome to the Movie Stack web application! This application allows you to explo
 - **Deployment:** Vercel (formerly Zeit)
 
 ## Screenshots
-
+### **Home Page**
 ![Home Page](/ScreenShots/Homepage.png)
+### **Movie Details**
 ![Movie Details](/ScreenShots/MovieDetails.png)
 
 ## Demo
@@ -32,22 +33,6 @@ To get a local copy up and running follow these simple steps:
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
 
-## Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
 ## Contact
 
 You can reach me via email at itmughal2023@gmail.com.
-
-Project Link: [https://github.com/your-username/movie-stack](https://github.com/your-username/movie-stack)
